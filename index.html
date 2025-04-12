@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoPets - Pet Shop Móvel</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            background-color: #e0f7fa; /* Um tom de azul/verde claro para lembrar cuidado animal */
+            color: #333;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 960px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        header {
+            background-color: #29b6f6; /* Azul mais vibrante */
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            border-radius: 8px 8px 0 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        header img {
+            max-width: 150px; /* Ajuste o tamanho conforme necessário */
+            height: auto;
+            margin-bottom: 10px;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        header p {
+            font-size: 1.1em;
+            margin-top: 5px;
+        }
+        nav {
+            background-color: #81d4fa; /* Azul mais claro para navegação */
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        main {
+            padding: 20px 0;
+        }
+        section {
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9fbe7; /* Um tom de amarelo claro para destacar o conteúdo */
+        }
+        section h2 {
+            color: #29b6f6;
+        }
+        .services-list {
+            list-style: none;
+            padding: 0;
+        }
+        .services-list li {
+            padding: 8px 0;
+            border-bottom: 1px dotted #ccc;
+        }
+        .services-list li:last-child {
+            border-bottom: none;
+        }
+        .contact-info {
+            text-align: center;
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #e1f5fe; /* Outro tom de azul claro para contato */
+        }
+        .contact-info h2 {
+            color: #29b6f6;
+        }
+        .contact-info p {
+            margin-bottom: 10px;
+        }
+        .email-link {
+            color: #29b6f6;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .email-link:hover {
+            text-decoration: underline;
+        }
+        .call-to-action {
+            text-align: center;
+            margin-top: 30px;
+        }
+        .call-to-action a {
+            display: inline-block;
+            background-color: #4fc3f7; /* Um tom de azul mais ativo */
+            color: #fff;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 1.2em;
+            transition: background-color 0.3s ease;
+        }
+        .call-to-action a:hover {
+            background-color: #03a9f4;
+        }
+        footer {
+            background-color: #29b6f6;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            border-radius: 0 0 8px 8px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="imagens/LogoAutopets.png" alt="Logo AutoPets">
+            <h1>AutoPets - Pet Shop Móvel</h1>
+            <p>Seu pet cuidado com carinho, onde você estiver!</p>
+        </header>
+
+        <nav>
+            <a href="#">Início</a>
+            <a href="#">Serviços</a>
+            <a href="#">Agendamento</a>
+            <a href="#">Sobre Nós</a>
+            <a href="#">Contato</a>
+        </nav>
+
+        <main>
+            <section>
+                <h2>Conveniência e Cuidado para o Seu Pet</h2>
+                <p>A AutoPets traz até você todos os serviços que seu melhor amigo precisa, no conforto do seu lar ou onde você estiver. Diga adeus ao estresse de levar seu pet ao pet shop tradicional!</p>
+                <p>Nossa unidade móvel é equipada com tudo o necessário para oferecer um atendimento de qualidade e com todo o carinho que seu pet merece.</p>
+            </section>
+
+            <section>
+                <h2>Nossos Serviços Móveis</h2>
+                <ul class="services-list">
+                    <li>Banho e Tosa Personalizados</li>
+                    <li>Hidratação e Condicionamento</li>
+                    <li>Corte de Unhas</li>
+                    <li>Limpeza de Ouvidos</li>
+                    <li>Escovação de Dentes</li>
+                    <li>Penteados e Acabamentos Especiais</li>
+                    <li>Consultas Veterinárias (em parceria)</li>
+                    <li>Aplicação de Vacinas (em parceria)</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Agende Seu Atendimento</h2>
+                <p>É fácil e rápido agendar o serviço da AutoPets! Entre em contato conosco por telefone, WhatsApp ou e-mail e escolha o melhor dia e horário para você e seu pet.</p>
+                <div class="call-to-action">
+                    <a href="#">Agendar Agora</a>
+                </div>
+            </section>
+
+            <section>
+                <h2>Sobre Nós</h2>
+                <p>A AutoPets nasceu da paixão por animais e da vontade de oferecer um serviço diferenciado e conveniente para os tutores. Nossa equipe é formada por profissionais qualificados e amantes de pets, comprometidos com o bem-estar e a felicidade do seu companheiro.</p>
+            </section>
+
+            <section class="contact-info">
+                <h2>Entre em Contato Conosco</h2>
+                <p>Para agendamentos, dúvidas ou mais informações, utilize o seguinte e-mail:</p>
+                <p><a href="mailto:autopetsdf@gmail.com" class="email-link">autopetsdf@gmail.com</a></p>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 AutoPets - Pet Shop Móvel. Cuidado onde você estiver!</p>
+        </footer>
+    </div>
+</body>
+</html>
