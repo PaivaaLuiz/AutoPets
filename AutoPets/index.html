@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoPets - Pet Shop Móvel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="imagens/LogoAutopets.png" alt="Logo AutoPets">
+            <h1>AutoPets - Pet Shop Móvel</h1>
+            <p>Seu pet cuidado com carinho, onde você estiver!</p>
+        </header>
+
+        <nav>
+            <a href="#inicio">Início</a>
+            <a href="#servicos">Serviços</a>
+            <a href="#agendamento">Agendamento</a>
+            <a href="#sobre-nos">Sobre Nós</a>
+            <a href="#contato">Contato</a>
+        </nav>
+
+        <main>
+            <section id="inicio">
+                <h2>Conveniência e Cuidado para o Seu Pet</h2>
+                <p>A AutoPets traz até você todos os serviços que seu melhor amigo precisa, no conforto do seu lar ou onde você estiver. Diga adeus ao estresse de levar seu pet ao pet shop tradicional!</p>
+                <p>Nossa unidade móvel é equipada com tudo o necessário para oferecer um atendimento de qualidade e com todo o carinho que seu pet merece.</p>
+            </section>
+
+            <section id="servicos">
+                <h2>Nossos Serviços Móveis</h2>
+                <ul class="services-list">
+                    <li>Banho e Tosa Personalizados</li>
+                    <li>Hidratação e Condicionamento</li>
+                    <li>Corte de Unhas</li>
+                    <li>Limpeza de Ouvidos</li>
+                    <li>Escovação de Dentes</li>
+                    <li>Penteados e Acabamentos Especiais</li>
+                    <li>Consultas Veterinárias (em parceria)</li>
+                    <li>Aplicação de Vacinas (em parceria)</li>
+                </ul>
+            </section>
+
+            <section id="agendamento">
+                <h2>Agende Seu Atendimento</h2>
+                <p>É fácil e rápido agendar o serviço da AutoPets! Entre em contato conosco por telefone, WhatsApp ou e-mail e escolha o melhor dia e horário para você e seu pet.</p>
+                <div class="call-to-action">
+                    <a href="#">Agendar Agora!</a>
+                </div>
+            </section>
+
+            <section id="sobre-nos">
+                <h2>Sobre Nós</h2>
+                <p>A AutoPets nasceu da paixão por animais e da vontade de oferecer um serviço diferenciado e conveniente para os tutores. Nossa equipe é formada por profissionais qualificados e amantes de pets, comprometidos com o bem-estar e a felicidade do seu companheiro.</p>
+            </section>
+
+            <section class="contact-info" id="contato">
+                <h2>Entre em Contato Conosco</h2>
+                <p>Para agendamentos, dúvidas ou mais informações, utilize o seguinte e-mail:</p>
+                <p><a href="mailto:autopetsdf@gmail.com" class="email-link">autopetsdf@gmail.com</a></p>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 AutoPets - Pet Shop Móvel. Cuidado onde você estiver!</p>
+        </footer>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const navLinks = document.querySelectorAll('nav a');
+                const sections = document.querySelectorAll('main section');
+
+                navLinks.forEach(link => {
+                    link.addEventListener('click', function(event) {
+                        event.preventDefault();
+
+                        const targetId = this.getAttribute('href').substring(1);
+
+                        sections.forEach(section => {
+                            section.style.display = 'none';
+                        });
+
+                        const targetSection = document.getElementById(targetId);
+                        if (targetSection) {
+                            targetSection.style.display = 'block';
+                        }
+                    });
+                });
+
+                const inicioSection = document.getElementById('inicio');
+                if (inicioSection) {
+                    inicioSection.style.display = 'block';
+                }
+            });
+        </script>
+    </div>
+</body>
+</html>
