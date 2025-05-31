@@ -43,14 +43,22 @@
                 </ul>
             </section>
 
-            <section id="agendamento">
+            <section id="agendamento" class="contact-page-content">
                 <h2>Agende Seu Atendimento</h2>
-                <p>É fácil e rápido agendar o serviço da AutoPets! Entre em contato conosco por telefone, WhatsApp ou e-mail e escolha o melhor dia e horário para você e seu pet.</p>
-                <div class="call-to-action">
-                    <a href="#">Agendar Agora!</a>
+                <p>É fácil e rápido agendar o serviço da AutoPets! Entre em contato conosco para agendar o melhor dia e horário para você e seu pet.</p>
+
+                <div class="contact-options">
+                    <p>Fale conosco diretamente pelo WhatsApp:</p>
+                    <a href="https://wa.me/556198846316" target="_blank" class="whatsapp-link">
+                        <img src="https://img.icons8.com/color/24/000000/whatsapp--v1.png" alt="WhatsApp Icon"/> WhatsApp
+                    </a>
+                    <p>Ou envie um e-mail:</p>
+                    <a href="mailto:autopetsdf@gmail.com" target="_blank" class="email-link">
+                        <img src="https://img.icons8.com/material-rounded/24/ffffff/mail.png" alt="Email Icon"/> autopetsdf@gmail.com
+                    </a>
+                    <p>Retornaremos o mais breve possível!</p>
                 </div>
             </section>
-
             <section id="sobre-nos">
                 <h2>Sobre Nós</h2>
                 <p>A AutoPets nasceu da paixão por animais e da vontade de oferecer um serviço diferenciado e conveniente para os tutores. Nossa equipe é formada por profissionais qualificados e amantes de pets, comprometidos com o bem-estar e a felicidade do seu companheiro.</p>
@@ -72,27 +80,36 @@
                 const navLinks = document.querySelectorAll('nav a');
                 const sections = document.querySelectorAll('main section');
 
+                // Função para exibir uma seção específica e esconder as outras
+                function showSection(id) {
+                    sections.forEach(section => {
+                        section.style.display = 'none'; // Esconde todas as seções
+                    });
+                    const targetSection = document.getElementById(id);
+                    if (targetSection) {
+                        targetSection.style.display = 'block'; // Exibe a seção desejada
+                    }
+                }
+
+                // Ao carregar a página, exibe a seção "Início" por padrão
+                showSection('inicio');
+
+                // Adiciona o evento de clique para cada link da navegação
                 navLinks.forEach(link => {
                     link.addEventListener('click', function(event) {
-                        event.preventDefault();
+                        const href = this.getAttribute('href');
 
-                        const targetId = this.getAttribute('href').substring(1);
-
-                        sections.forEach(section => {
-                            section.style.display = 'none';
-                        });
-
-                        const targetSection = document.getElementById(targetId);
-                        if (targetSection) {
-                            targetSection.style.display = 'block';
+                        // Se o link é uma âncora interna (começa com '#'),
+                        // previne o comportamento padrão e controla a visibilidade.
+                        if (href.startsWith('#')) {
+                            event.preventDefault();
+                            const targetId = href.substring(1); // Pega o ID da seção (ex: "inicio", "servicos")
+                            showSection(targetId); // Exibe a seção correspondente
                         }
+                        // Se o link não começa com '#', o navegador o tratará como um link normal
+                        // (Embora agora todos os links de nav sejam internos com '#')
                     });
                 });
-
-                const inicioSection = document.getElementById('inicio');
-                if (inicioSection) {
-                    inicioSection.style.display = 'block';
-                }
             });
         </script>
     </div>
