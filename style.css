@@ -63,9 +63,10 @@ main {
     padding: 20px 0;
 }
 
-main section:not(#inicio) {
+/* Esta regra deve ser REMOVIDA ou COMENTADA. O JS controlará o display. */
+/* main section:not(#inicio) {
     display: none;
-}
+} */
 
 section {
     margin-bottom: 20px;
@@ -93,7 +94,17 @@ section h2 {
     border-bottom: none;
 }
 
-.contact-info {
+/* Estilos para a seção de contato/agendamento com os botões */
+.contact-page-content { /* Reutiliza esta classe para a seção de agendamento */
+    text-align: center;
+    padding: 40px; /* Ajuste se necessário para combinar com o resto das seções */
+    background-color: #e1f5fe; /* Pode ser removido se section já tem um background */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* margin-top: 50px; */ /* Pode ser removido, section já tem margin-bottom */
+}
+
+.contact-info { /* Esta é para a seção "Contato" mais abaixo */
     text-align: center;
     margin-top: 20px;
     padding: 15px;
@@ -110,7 +121,7 @@ section h2 {
     margin-bottom: 10px;
 }
 
-.email-link {
+.email-link { /* Geral para links de email */
     color: #29b6f6;
     text-decoration: none;
     font-weight: bold;
@@ -120,7 +131,45 @@ section h2 {
     text-decoration: underline;
 }
 
-.call-to-action {
+/* Estilos para os botões de contato */
+.contact-options {
+    margin-top: 30px;
+}
+
+.contact-options p {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+}
+
+.contact-options a {
+    display: inline-block;
+    color: #fff;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.contact-options .whatsapp-link {
+    background-color: #25d366; /* Cor do WhatsApp */
+}
+
+.contact-options .whatsapp-link:hover {
+    background-color: #128c7e;
+}
+
+.contact-options .email-link {
+    background-color: #f44336; /* Cor para e-mail */
+}
+
+.contact-options .email-link:hover {
+    background-color: #d32f2f;
+}
+
+/* A classe .call-to-action não será mais usada se o botão "Agendar Agora" for removido */
+/* .call-to-action {
     text-align: center;
     margin-top: 30px;
 }
@@ -139,7 +188,8 @@ section h2 {
 
 .call-to-action a:hover {
     background-color: #03a9f4;
-}
+} */
+
 
 footer {
     background-color: #29b6f6;
