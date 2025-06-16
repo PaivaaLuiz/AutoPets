@@ -80,34 +80,27 @@
                 const navLinks = document.querySelectorAll('nav a');
                 const sections = document.querySelectorAll('main section');
 
-                // Função para exibir uma seção específica e esconder as outras
                 function showSection(id) {
                     sections.forEach(section => {
-                        section.style.display = 'none'; // Esconde todas as seções
+                        section.style.display = 'none'; 
                     });
                     const targetSection = document.getElementById(id);
                     if (targetSection) {
-                        targetSection.style.display = 'block'; // Exibe a seção desejada
+                        targetSection.style.display = 'block'; 
                     }
                 }
 
-                // Ao carregar a página, exibe a seção "Início" por padrão
                 showSection('inicio');
 
-                // Adiciona o evento de clique para cada link da navegação
                 navLinks.forEach(link => {
                     link.addEventListener('click', function(event) {
                         const href = this.getAttribute('href');
 
-                        // Se o link é uma âncora interna (começa com '#'),
-                        // previne o comportamento padrão e controla a visibilidade.
                         if (href.startsWith('#')) {
                             event.preventDefault();
-                            const targetId = href.substring(1); // Pega o ID da seção (ex: "inicio", "servicos")
-                            showSection(targetId); // Exibe a seção correspondente
+                            const targetId = href.substring(1); 
+                            showSection(targetId); 
                         }
-                        // Se o link não começa com '#', o navegador o tratará como um link normal
-                        // (Embora agora todos os links de nav sejam internos com '#')
                     });
                 });
             });
